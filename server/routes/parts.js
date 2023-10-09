@@ -5,7 +5,7 @@ const router = express();
 
 
 //Create
-router.post('/api/part', async (req, res) => {
+router.post('/api/parts', async (req, res) => {
     try {
         const data = req.body;
 

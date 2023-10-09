@@ -1,29 +1,28 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { Route, Routes } from 'react-router-dom';
-import Login from './pages/login';
+import { Route, Routes, Navigate } from 'react-router-dom';
+
 import Landing from './pages/landing';
+import Signup from './components/signup';
+import Login from './components/login';
 import Cart from './pages/cart';
+import Allproducts from './pages/allProducts';
 import Admin from './pages/admin';
-import Navbar from './components/navbar';
+
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
+  const user = localStorage.getItem("token")
   return (
     <div className="App">
-      <Navbar />
-        <Routes>
-          <Route path='/' element={<Login />} />
-          <Route path='/landing' element={<Landing />} />
-          <Route path='/checkout' element={<Cart />} />
-          <Route path='/admininventory' element={<Admininventory />} />
-        </Routes>
-        {/* <Routes>
+      <Routes>
         {user && <Route path='/' exact element={<Landing />} />}
+        <Route path='/landing' element={<Landing />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         <Route path='/' exact element={<Navigate replace to="/login" />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/question' element={<Questions/>}/>
-      </Routes> */}
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/parts' element={<Allproducts />} />
+        <Route path='/admin' element={<Admin />} />
+      </Routes>
     </div>
   );
 }
