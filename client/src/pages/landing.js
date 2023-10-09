@@ -14,7 +14,8 @@ function Landing() {
           vehicle running smoothly and looking its best.</p>
         <Button variant="primary" href="/parts">All Products</Button></center>
         <br/>
-            <center><div className={styles.hero_img}></div></center>
+        <center><img className={styles.hero_img}/></center>
+            {/* <center><div className={styles.hero_img}></div></center> */}
      
     </div>
   )

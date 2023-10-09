@@ -102,12 +102,16 @@ function Allproducts() {
   const leProducts = products.map((produx) => (
     <Col key={produx._id} xs={12} md={3}>
       <Card height={200}>
-        <Card.Img variant="top" src={produx.image} height={150} />
+        <Card.Img variant="top" src={produx.image} height={200} />
         <Card.Body>
           <Card.Title>{produx.name}</Card.Title>
           <Card.Text>
-            <p>Category: {produx.category}</p>
-            <p className='treefiddy'>R {produx.price}</p>
+            <center>
+            <p>Car Make: {produx.make}</p>
+            <p>Car Model: {produx.model}</p>
+            <p className='treefiddy'>Chasis Number: {produx.chasisNumber}</p>
+            <p>Year: {produx.year}</p>
+            </center>
           </Card.Text>
           <div>
             <a href="#" className="btn btn-primary right" onClick={() => handleCart(produx)}>Add to Cart</a>

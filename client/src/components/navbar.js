@@ -26,7 +26,7 @@ function Navbarz() {
                 <a className="nav-link" href="/landing">Home <span className="sr-only"></span></a>
             </li>
             <li className="nav-item active">
-                <a className="nav-link" href="/parts">parts <span className="sr-only"></span></a>
+                <a className="nav-link" href="/parts">Parts <span className="sr-only"></span></a>
             </li>
             <li className="nav-item active">
                 <a className="nav-link" href="/Admin">Admin <span className="sr-only"></span></a>

@@ -1,6 +1,7 @@
 //Imports
 const express = require('express');
 const partsSchema = require('../models/parts');
+const invoiceSchema = require('../models/invoice');
 const router = express();
 
 
@@ -72,6 +73,14 @@ router.get('/api/allParts', async (req, res) => {
         res.status(500).json({ error: "There was an error", details: error.message });
     }
 });
+
+//POST 2
+    router.post('/api/invoices', async (req,res) => {
+        const part = new invoiceSchema({...req.body})
+        await part.save()
+            .then(response => res.json(response))
+            .catch(error => res.status(500).json(error))
+    })
 
 // Export the router
 module.exports = router;
