@@ -6,7 +6,7 @@ const partsSchema = mongoose.Schema({
     model: { type: String, required: true },
     chasisNumber: { type: Number, required: true },
     year: { type: Number, required: true },
-    name: { type: String, required: true }
+    image: { type: String, required: true }
 })
 
 module.exports = mongoose.model("Parts", partsSchema)
