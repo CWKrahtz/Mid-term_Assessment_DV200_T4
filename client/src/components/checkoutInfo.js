@@ -17,13 +17,13 @@ function CheckoutInfo() {
         window.location = "/cart"
     };
 
-    // Creates the invoice
+    // Creates the
     const invoice = () => {
         const order = sessionStorage.getItem('cart')
         setDate(new Date())
 
         const payload = {
-            user: userName,
+            user: userEmail,
             products: order
         }
 
